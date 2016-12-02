@@ -1,2 +1,5 @@
 *.xcuserdata
-*json
+.DS_Store
+*.xcuserstate
+*.json
+/xcuserdata/
