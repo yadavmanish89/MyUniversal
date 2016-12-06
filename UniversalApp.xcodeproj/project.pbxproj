@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3573CED1DF751D8008848B8 /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = D3573CEC1DF751D8008848B8 /* Dummy.json */; };
 		D39B25731DEF587C002D3B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39B25721DEF587C002D3B97 /* AppDelegate.swift */; };
 		D39B25751DEF587C002D3B97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39B25741DEF587C002D3B97 /* ViewController.swift */; };
 		D39B25781DEF587C002D3B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39B25761DEF587C002D3B97 /* Main.storyboard */; };
 		D39B257A1DEF587C002D3B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39B25791DEF587C002D3B97 /* Assets.xcassets */; };
 		D39B257D1DEF587C002D3B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39B257B1DEF587C002D3B97 /* LaunchScreen.storyboard */; };
-		D39B25851DEF610B002D3B97 /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = D39B25841DEF610B002D3B97 /* Dummy.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3573CEC1DF751D8008848B8 /* Dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
 		D39B256F1DEF587C002D3B97 /* UniversalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39B25721DEF587C002D3B97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D39B25741DEF587C002D3B97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +24,6 @@
 		D39B25791DEF587C002D3B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D39B257C1DEF587C002D3B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D39B257E1DEF587C002D3B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D39B25841DEF610B002D3B97 /* Dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				D39B25761DEF587C002D3B97 /* Main.storyboard */,
 				D39B25791DEF587C002D3B97 /* Assets.xcassets */,
 				D39B257B1DEF587C002D3B97 /* LaunchScreen.storyboard */,
-				D39B25841DEF610B002D3B97 /* Dummy.json */,
+				D3573CEC1DF751D8008848B8 /* Dummy.json */,
 				D39B257E1DEF587C002D3B97 /* Info.plist */,
 			);
 			path = UniversalApp;
@@ -128,7 +128,7 @@
 			files = (
 				D39B257D1DEF587C002D3B97 /* LaunchScreen.storyboard in Resources */,
 				D39B257A1DEF587C002D3B97 /* Assets.xcassets in Resources */,
-				D39B25851DEF610B002D3B97 /* Dummy.json in Resources */,
+				D3573CED1DF751D8008848B8 /* Dummy.json in Resources */,
 				D39B25781DEF587C002D3B97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
