@@ -2,4 +2,4 @@
 .DS_Store
 *.xcuserstate
 */xcdebugger/*
-/xcuserdata/
+*/xcuserdata/*
