@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        /*
         let tableHeaderLabel:UILabel = UILabel(frame:CGRect(origin: CGPoint(x:0, y:0), size: CGSize(width:50, height:20)))
         tableHeaderLabel.text = "HEAD"
         tableHeaderLabel.backgroundColor = UIColor.black.withAlphaComponent(0.3)
@@ -24,9 +24,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableFooterLabel.text = "FOOT"
         tableFooterLabel.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         tableView.tableFooterView = tableFooterLabel
-
+        */
+//        self.tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: "CountryTableViewCell")
+//    self.tableView.register(UINib(nibName: "CountryTableViewCell", bundle: nil), forCellReuseIdentifier: "myCell")
     }
-    
+    //MARK: Table Delegates
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35
     }
@@ -47,14 +49,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.subtitle, reuseIdentifier:"myCell")
+        
+        var cell:CountryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CountryTableViewCell") as! CountryTableViewCell
+//        var cell:CountryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CountryTableViewCell", for: indexPath) as! CountryTableViewCell//tableView.dequeueReusableCellWithIdentifier("CountryTableViewCell", forIndexPath: indexPath) as! CountryTableViewCell
+
+        if (cell.isEqual(nil)) {
+            cell = CountryTableViewCell.init(style:.default, reuseIdentifier: "CountryTableViewCell")
+        }
+        
         if(indexPath.section == 0){
-            cell.textLabel?.text = "Hello"
+            cell.countryLabel?.text = "Hello"
         }
         else{
-            cell.textLabel?.text = "Hey"
+            cell.countryLabel?.text = "Hey"
         }
+        cell.countryImageView.image = UIImage(named:"usa_map.png")
+        let sum1  = add(firstNumber: indexPath.section, secondNumber: indexPath.row)
+        
+        let sum2 = add(x: indexPath.row, y: indexPath.section)
+//        NSLog("sum is %d and %d", sum1, sum2)
         return cell
+    }
+    
+    func add(firstNumber x:NSInteger,secondNumber y:NSInteger) -> NSInteger {
+        
+        return x + y
+    }
+    func add(x:NSInteger,y:NSInteger) -> NSInteger {
+        
+        return x + y
+    }
+    
+    @IBAction func refreshButtonAction(_ sender: UIBarButtonItem) {
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
